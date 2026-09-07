@@ -1,0 +1,115 @@
+%-------------------------------------------------------------------------------
+% Ashwin Guda - Resume (August 2026)
+%-------------------------------------------------------------------------------
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[top=0.4in,bottom=0.4in,left=0.5in,right=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{bm}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black,
+    pdftitle={Ashwin Guda Resume},
+    pdfauthor={Ashwin Guda}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedbottom
+\raggedright
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\uppercase}
+  {}{0em}{}[\vspace{-6pt}\rule{\textwidth}{0.8pt}]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+\newcommand{\headerrow}[2]{#1\hfill #2\\}
+
+\newcommand{\entry}[4]{%
+  \headerrow{\textbf{#1}}{#2}%
+  \headerrow{\textit{#3}}{#4}%
+}
+
+\newcommand{\project}[2]{%
+  \headerrow{\textbf{#1}}{#2}%
+}
+
+\newenvironment{bullets}
+  {\begin{itemize}[leftmargin=*,labelsep=0.5em,topsep=1pt,itemsep=0pt,parsep=0pt]}
+  {\end{itemize}\vspace{1pt}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Ashwin Guda}\\[3pt]
+  (215)-578-7053 $|$ \href{mailto:aguda@ufl.edu}{aguda@ufl.edu} $|$
+  \href{https://linkedin.com/in/arguda/}{linkedin.com/in/arguda/}
+\end{center}
+
+\section{Education}
+
+\headerrow{\textbf{University of Florida, Herbert Wertheim College of Engineering}}{Gainesville, FL}
+\headerrow{\textit{Bachelor of Science in Computer Science, GPA: 3.6}}{Aug 2024 -- May 2028}
+\textit{Minor in Economics}\hfill Dean's List\\[3pt]
+\textbf{Relevant Coursework:} Data Structures and Algorithms, Operating Systems, Natural Language Processing, Intro to Software Engineering, Computer Organization, Discrete Structures
+
+\section{Certifications and Skills}
+
+\textbf{Certifications:} Google Data Analytics Career Certificate \\
+\textbf{Skills:} Python, SQL, C++, C\#, Java, R, MATLAB, Git, AWS, Redis, Tableau, Snowflake, MS Excel, ROS, Linux, Claude Code
+
+\section{Experience}
+
+\entry{Affinity Solutions}{New York City, NY}
+      {FI Data Analytics Intern}{Jun 2026 -- Aug 2026}
+\begin{bullets}
+  \item Authored the technical specification for a new audience segmentation feature, defining the \textbf{SQL} aggregation logic and queries behind its insights dashboard, improving engineering workflows by \textbf{80\%}
+  \item Documented an end-to-end offer syndication pipeline spanning \textbf{SQL} storage tables, \textbf{Python} execution scripts, and validation rules improving onboarding by \textbf{50\%}
+  \item Audited transaction datamart tables produced by upstream \textbf{Airflow DAGs} against specification, reconciling schema and data mismatches before downstream use improving data accuracy by \textbf{25\%}
+  \item Wrote test cases and seeded pre-production \textbf{SQL} tables to validate \textbf{Python ETL} output across all user paths ahead of release
+\end{bullets}
+
+\entry{Mangomelon AI}{Remote}
+      {Data Analyst Intern}{Sep 2025 -- Apr 2026}
+\begin{bullets}
+  \item Queried and processed \textbf{25M+} healthcare records across multiple NIS (National Inpatient Sample) tables (\textbf{8B+} total data values) using \textbf{SQL} and \textbf{Excel} and \textbf{AI} to analyze patient outcomes
+  \item Analyzed NIS data using \textbf{MS Excel} and \textbf{SQL} to assess patient outcomes based on diagnoses, procedures, and comorbidities utilizing \textbf{AI-led} workflows
+\end{bullets}
+
+\entry{cSigma Finance}{New York City, NY}
+      {Summer Intern}{Jun 2025 -- Aug 2025}
+\begin{bullets}
+  \item Analyzed company credit tapes to calculate liquidity and counter-party risk premiums utilizing \textbf{MS Excel}
+  \item Wrote a white paper outlining ways to improve liquidity premium calculations accuracy within their credit model by \textbf{30\%}
+\end{bullets}
+
+\section{Projects}
+
+\project{Campus Network Pathfinder}{April 2026}
+\begin{bullets}
+  \item Built a \textbf{C++} application modeling a weighted graph of campus locations to compute shortest routes and lowest-cost connection layouts
+  \item Implemented \textbf{Dijkstra's algorithm} with a \textbf{min-heap priority queue} for efficient shortest-path
+  \item Constructed a \textbf{minimum spanning tree} utilizing \textbf{Kruskal's} to create most efficient route layout for students
+\end{bullets}
+
+\project{Airline Delay Data Analysis Pipeline}{March 2026}
+\begin{bullets}
+  \item Engineered a high-performance \textbf{C++} data pipeline processing \textbf{6M+} U.S. flight records (\textbf{144M+} data points), enabling aggregation of delays by airline, airport, and date
+  \item Optimized large-scale data processing using a custom \textbf{Heap Sort}, approximately $\bm{O(n\log n)}$ runtime
+  \item Developed reusable data structures and command-line reporting tools to rank the top airlines and dates with the highest delay volume using \textbf{STL} containers and \textbf{object-oriented design}
+\end{bullets}
+
+\project{Multithreaded Resale Market Intelligence Engine}{July 2026}
+\begin{bullets}
+  \item Built a concurrent \textbf{C++} data pipeline using a custom \textbf{thread pool} to fetch and aggregate sold listing data from \textbf{eBay's Browse API} across consumer goods categories
+  \item Implemented \textbf{mutex-protected} aggregation to compute average resale margins, sales volume, and arbitrage opportunity scores across categories after platform fees
+\end{bullets}
+
+\end{document}

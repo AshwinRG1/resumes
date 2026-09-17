@@ -37,8 +37,9 @@
   \headerrow{\textit{#3}}{#4}%
 }
 
-\newcommand{\project}[2]{%
-  \headerrow{\textbf{#1}}{#2}%
+% #1 project name, #2 technologies, #3 date
+\newcommand{\project}[3]{%
+  \headerrow{\textbf{#1} $|$ \textit{#2}}{#3}%
 }
 
 \newenvironment{bullets}
@@ -63,7 +64,7 @@
 \section{Certifications and Skills}
 
 \textbf{Certifications:} Google Data Analytics Career Certificate \\
-\textbf{Skills:} Python, SQL, C++, C, Java, R, MATLAB, Git, AWS, Redis, Tableau, Snowflake, MS Excel, ROS, Linux, Claude Code, REST API, Django, Flask
+\textbf{Skills:} Python, SQL, C++, C, Java, R, MATLAB, Git, AWS (Redshift, Athena), Redis, Tableau, Snowflake, MS Excel, ROS, Linux, Claude Code, REST API, Django, Flask
 
 \section{Experience}
 
@@ -71,15 +72,15 @@
       {Financial Institutions Analytics Intern}{Jun 2026 -- Aug 2026}
 \begin{bullets}
   \item Authored the technical specification for a new audience segmentation feature, defining the \textbf{SQL} aggregation logic and queries behind its insights dashboard, improving engineering workflows by \textbf{80\%}
-  \item Documented an end-to-end offer syndication pipeline spanning \textbf{SQL} storage tables, \textbf{Python} execution scripts, and validation rules improving onboarding by \textbf{50\%}
-  \item Audited transaction datamart tables produced by upstream \textbf{Airflow DAGs} against specification, reconciling schema and data mismatches before downstream use improving data accuracy by \textbf{25\%}
+  \item Documented an end-to-end offer syndication pipeline spanning \textbf{AWS Redshift} storage tables, \textbf{Python} execution scripts, and validation rules improving onboarding by \textbf{50\%}
+  \item Audited transaction datamart tables hosted in \textbf{AWS Redshift} and produced by upstream \textbf{Airflow DAGs} against specification, reconciling schema and data mismatches before downstream use improving data accuracy by \textbf{25\%}
   \item Wrote test cases and seeded pre-production \textbf{SQL} tables to validate \textbf{Python ETL} output across all user paths ahead of release
 \end{bullets}
 
 \entry{Mangomelon AI}{Remote}
       {Data Analyst Intern}{Sep 2025 -- Apr 2026}
 \begin{bullets}
-  \item Queried and processed \textbf{25M+} healthcare records across multiple NIS (National Inpatient Sample) tables (\textbf{8B+} total data values) using \textbf{SQL} and \textbf{Excel} and \textbf{AI} to analyze patient outcomes
+  \item Queried and processed \textbf{25M+} healthcare records across multiple NIS (National Inpatient Sample) tables in \textbf{AWS Athena} (\textbf{8B+} total data values) using \textbf{SQL} and \textbf{Excel} and \textbf{AI} to analyze patient outcomes
   \item Analyzed NIS data using \textbf{MS Excel} and \textbf{SQL} to assess patient outcomes based on diagnoses, procedures, and comorbidities utilizing \textbf{AI-led} workflows
 \end{bullets}
 
@@ -92,20 +93,20 @@
 
 \section{Projects}
 
-\project{Autonomous Wildfire Detection \& Suppression}{Aug 2026 -- Present}
+\project{Autonomous Wildfire Detection \& Suppression}{Python, PyTorch, Jetson Orin NX}{Aug 2026 -- Present}
 \begin{bullets}
   \item Designing a two-stage \textbf{ML} detection framework fusing \textbf{RGB} and \textbf{thermal} imagery into a \textbf{6-channel} tensor, with temporal filtering and event-level evaluation splits to suppress false alarms
   \item Researching low-frequency acoustic flame suppression, modeling radiation efficiency to select waveguide confinement over free-field emission and designing a swept-frequency bench test
   \item Evaluating airframe and sensor tradeoffs for a patrol drone, sizing endurance, payload mass, and onboard \textbf{Jetson Orin NX} compute against fleet coverage requirements
 \end{bullets}
 
-\project{Multithreaded Resale Market Intelligence Engine}{July 2026}
+\project{Multithreaded Resale Market Intelligence Engine}{C++17, Multithreading, REST APIs, CMake}{July 2026}
 \begin{bullets}
   \item Built a concurrent \textbf{C++} data pipeline using a custom \textbf{thread pool} to fetch and aggregate sold listing data from \textbf{eBay's Browse API} across consumer goods categories
   \item Implemented \textbf{mutex-protected} aggregation to compute average resale margins, sales volume, and arbitrage opportunity scores across categories after platform fees
 \end{bullets}
 
-\project{Campus Network Pathfinder}{April 2026}
+\project{Campus Network Pathfinder}{C++, STL, Graph Algorithms}{April 2026}
 \begin{bullets}
   \item Built a \textbf{C++} application modeling a weighted graph of campus locations to compute the shortest routes and lowest-cost connection layouts
   \item Implemented \textbf{Dijkstra's algorithm} with a \textbf{min-heap priority queue} for efficient shortest-path
